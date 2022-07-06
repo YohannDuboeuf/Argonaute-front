@@ -1,0 +1,45 @@
+:host {
+  .members-container {
+    max-width: 90rem;
+    margin-inline: auto;
+    margin-block: 2rem;
+
+    .members {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+
+      .actual-members {
+        flex: 0 0 100%;
+      }
+    }
+  }
+  }
+
+  form {
+    max-width: 20rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 25px;
+
+    label {
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-block: 1rem;
+      flex: 0 0 100%;
+      margin-bottom: 15px;
+    }
+
+    input {
+      border-radius: 15px;
+      padding: 0.55rem;
+      border: none;
+    }
+  }

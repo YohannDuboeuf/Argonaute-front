@@ -1,0 +1,13 @@
+<h2>Ajouter un(e) Argonaute</h2>
+<form [formGroup]="argonautForm" (ngSubmit)="onSubmit($event)">
+  <label for="name">Nom de l'argonaute</label>
+  <input (keyup.enter)="onSubmit($event)" formControlName="name" type="text" id="name" name="name" value=""
+    placeholder="charalampos">
+  <button class="btn_add" [disabled]="argonautForm.invalid" type="submit">Ajouter</button>
+</form>
+<h2 class="members-title">Membres de l'équipage</h2>
+<div *ngIf="(argonautsList$ | async) as argonautsList" class="members-container">
+<div class="members">
+  <p *ngFor="let argonaut of argonautsList;" class="argonaut-name">{{argonaut?.name}}</p>
+</div>
+</div>
